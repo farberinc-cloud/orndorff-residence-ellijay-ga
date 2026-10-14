@@ -12,21 +12,39 @@ body {
 header {
   background: #1a1a1a;
   color: white;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 100;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .logo {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  margin-right: 1.5rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+nav a, .dropdown > span {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  white-space: nowrap;
+  font-size: 0.95rem;
 }
 .logo img {
   width: 48px;
