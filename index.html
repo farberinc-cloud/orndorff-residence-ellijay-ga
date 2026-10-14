@@ -35,7 +35,12 @@
   </header>
   <main>
     <section class="hero">
-      <img src="images/plan-1-web.jpg" alt="Orndorff - Ellijay GA Rendering" class="hero-image">
+      <div class="carousel">
+        <img src="images/hero-color1.jpg" alt="Main color rendering" class="hero-image active">
+        <img src="images/hero-bw1.jpg" alt="Black and white rendering" class="hero-image">
+        <img src="images/hero-color2.jpg" alt="Color plan extract" class="hero-image">
+        <img src="images/hero-bw2.jpg" alt="Black and white extract" class="hero-image">
+      </div>
     </section>
     <section class="info">
       <h2>Project Information</h2>
@@ -50,5 +55,15 @@
   <footer>
     <p>&copy; 2026 Orndorff - Ellijay GA | As-Built Plans for Orndorff - Ellijay GA</p>
   </footer>
+  <script>
+    const images = document.querySelectorAll('.carousel .hero-image');
+    let current = 0;
+    function nextImage() {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }
+    setInterval(nextImage, 3000);
+  </script>
 </body>
 </html>
