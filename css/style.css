@@ -37,14 +37,49 @@ header {
   box-shadow: 0 0 0 2px #333;
   background: #fff;
 }
-nav a {
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+nav a, .dropdown > span {
   color: white;
   text-decoration: none;
-  margin-left: 1.5rem;
   font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
 }
-nav a:hover {
+nav a:hover, .dropdown:hover > span {
   color: #ccc;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #2a2a2a;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  border-radius: 4px;
+  z-index: 200;
+  top: 100%;
+  left: 0;
+}
+.dropdown-content a {
+  color: white;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+}
+.dropdown-content a:hover {
+  background: #444;
+  color: #fff;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 .hero {
   position: relative;
