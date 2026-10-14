@@ -81,6 +81,8 @@ nav a:hover {
   height: auto;
   margin: 1rem 0;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  transform-origin: center center;
 }
 .plan-page h1 {
   margin-bottom: 1rem;
